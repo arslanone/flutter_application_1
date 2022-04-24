@@ -22,6 +22,7 @@ class MyTextPage extends StatelessWidget {
       appBar: AppBar(title: Text(name)),
       // ignore: prefer_const_constructors
       body: Center(child: Text("Welcome to Patient Buddy Mobile App")),
+      // drawer: Drawer(),
     );
   }
 }
