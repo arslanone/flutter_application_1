@@ -28,15 +28,38 @@ class LoginPage extends StatelessWidget {
         children: [
           Image.asset(
             "assets/images/loginpic.png",
-            fit: BoxFit.contain,
+            fit: BoxFit.cover,
+          ),
+          SizedBox(
+            height: 15.0,
           ),
           Text(
-            "Welcome",
+            "Welcome To Patient Buddy!",
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
           ),
+          SizedBox(
+            height: 20.0,
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                      hintText: "Enter Your Good Name:",
+                      labelText: "Username:"),
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                      hintText: "Enter Your Password:", labelText: "Password:"),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
