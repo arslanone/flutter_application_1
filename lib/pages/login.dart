@@ -18,9 +18,14 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
 
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -37,7 +42,7 @@ class LoginPage extends StatelessWidget {
                 height: 15.0,
               ),
               Text(
-                "Welcome To Patient Buddy!",
+                "Welcome, $name!",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
@@ -55,6 +60,10 @@ class LoginPage extends StatelessWidget {
                       decoration: InputDecoration(
                           hintText: "Enter Your Good Name:",
                           labelText: "Username:"),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
                     ),
                     TextFormField(
                       obscureText: true,
@@ -65,17 +74,39 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       height: 20.0,
                     ),
-                    ElevatedButton(
-                      onPressed: () {
-                        // ignore: avoid_print
-                        // print("Welcome To Patient Buddy Mobile App!");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePage()));
-                      },
-                      child: Text("Get Started"),
-                    )
+                    // ElevatedButton(
+                    //   onPressed: () {
+                    //     // ignore: avoid_print
+                    //     // print("Welcome To Patient Buddy Mobile App!");
+                    //     Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //             builder: (context) => HomePage()));
+                    //   },
+                    //   child: Text("Get Started"),
+                    // )
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()));
+                        },
+                        child: AnimatedContainer(
+                          duration: Duration(seconds: 1),
+                          alignment: Alignment.center,
+                          height: 40,
+                          width: 120,
+                          child: Text(
+                            "Get Started",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                              color: Colors.deepPurple,
+                              borderRadius: BorderRadius.circular(8)),
+                        ))
                   ],
                 ),
               )
