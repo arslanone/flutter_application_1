@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import '../widgets/drawer.dart';
+
+class HomePage1 extends StatelessWidget {
+  final String name = "Patient Buddy";
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Patient Buddy"),
+      ),
+      body: Center(
+        child: Container(
+          child: Text("Welcome to $name"),
+        ),
+      ),
+      drawer: MyDrawer(),
+    );
+  }
+}
