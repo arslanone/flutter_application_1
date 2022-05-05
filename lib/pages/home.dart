@@ -1,4 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+
+import '../widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,6 +13,7 @@ class HomePage extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
         ),
+        debugShowCheckedModeBanner: false,
         home: MyTextPage());
   }
 }
@@ -24,7 +29,7 @@ class MyTextPage extends StatelessWidget {
       appBar: AppBar(title: Text(name)),
       // ignore: prefer_const_constructors
       body: Center(child: Text("Welcome to Patient Buddy Mobile App")),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }

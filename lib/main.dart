@@ -5,6 +5,7 @@ import 'package:flutter_application_1/pages/login.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  // ignore: prefer_const_constructors
   runApp(MyApp());
 }
 
@@ -23,8 +24,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
+        "/": (context) => HomePage(),
+        "/home": (context) => LoginPage(),
       },
     );
   }

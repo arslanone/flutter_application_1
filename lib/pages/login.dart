@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, prefer_const_constructors
+// ignore_for_file: unused_import, prefer_const_constructors, avoid_web_libraries_in_flutter
 // // ignore: prefer_const_constructors
 // child: Center(
 //   // ignore: prefer_const_constructors
@@ -14,7 +14,6 @@
 // ),
 
 import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home.dart';
 
@@ -27,7 +26,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   String name = "";
   bool changeButton = false;
-  final _formKey = GlobalKey<FormState>();
+  // final _formKey = GlobalKey<FormState>();
 
   moveTohome(BuildContext context) async {
     // if (_formKey.currentState!.validate()) {
@@ -78,12 +77,13 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                             hintText: "Enter Your Good Name:",
                             labelText: "Username:"),
-                        validator: (value) {
-                          if (value!.isNotEmpty) {
-                            return "Name Cannot Be Empty";
-                          }
-                          return null;
-                        },
+                        // validator: (value) {
+                        //   if (value!.isEmpty) {
+                        //     return "Username cannot be empty";
+                        //   }
+
+                        //   return null;
+                        // },
                         onChanged: (value) {
                           name = value;
                           setState(() {});
@@ -94,12 +94,15 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                             hintText: "Enter Your Password:",
                             labelText: "Password:"),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return "Password Cannot Be Empty";
-                          }
-                          return null;
-                        },
+                        // validator: (value) {
+                        //   if (value!.isEmpty) {
+                        //     return "Password cannot be empty";
+                        //   } else if (value.length < 6) {
+                        //     return "Password length should be atleast 6";
+                        //   }
+
+                        //   return null;
+                        // },
                       ),
                       SizedBox(
                         height: 20.0,
@@ -108,10 +111,10 @@ class _LoginPageState extends State<LoginPage> {
                       //   onPressed: () {
                       //     // ignore: avoid_print
                       //     // print("Welcome To Patient Buddy Mobile App!");
-                      //     Navigator.push(
-                      //         context,
-                      //         MaterialPageRoute(
-                      //             builder: (context) => HomePage()));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => HomePage()));
                       //   },
                       //   child: Text("Get Started"),
                       // ),
