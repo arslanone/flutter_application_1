@@ -36,7 +36,7 @@ class _HomePageState extends State<Hom> {
         title: Text("Patient Buddy"),
       ),
 
-      drawer: MyDrawer(), backgroundColor: Colors.deepPurple[600],
+      drawer: MyDrawer(), backgroundColor: Color.fromARGB(77, 199, 192, 192),
       // appBar: AppBar(
       //   backgroundColor: Colors.transparent,
       //   elevation: 0,

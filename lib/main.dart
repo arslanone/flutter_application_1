@@ -3,6 +3,7 @@ import 'package:flutter_application_1/pages/home.dart';
 import 'package:flutter_application_1/pages/login.dart';
 // ignore: unused_import
 import 'package:flutter_application_1/pages/new_home';
+import 'package:flutter_application_1/widgets/button.dart';
 // ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
 

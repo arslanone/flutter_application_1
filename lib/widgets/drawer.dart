@@ -51,11 +51,29 @@ class MyDrawer extends StatelessWidget {
                 }),
             ListTile(
                 leading: Icon(
+                  CupertinoIcons.chart_bar_square_fill,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  "My Medicines",
+                  textScaleFactor: 1.3,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Hom()),
+                  );
+                }),
+            ListTile(
+                leading: Icon(
                   CupertinoIcons.mail,
                   color: Colors.white,
                 ),
                 title: Text(
-                  "E-Mail",
+                  "Report A Bug",
                   textScaleFactor: 1.3,
                   style: TextStyle(
                     color: Colors.white,
@@ -84,7 +102,7 @@ class MyDrawer extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (context) => LoginPage()),
                   );
-                })
+                }),
           ],
         ),
       ),
