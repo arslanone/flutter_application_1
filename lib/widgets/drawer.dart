@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home.dart';
+import 'package:flutter_application_1/pages/home_grid.dart';
 import 'package:flutter_application_1/pages/login.dart';
 
 import '../pages/new_home';
@@ -49,18 +50,23 @@ class MyDrawer extends StatelessWidget {
                   );
                 }),
             ListTile(
-              leading: Icon(
-                CupertinoIcons.mail,
-                color: Colors.white,
-              ),
-              title: Text(
-                "E-Mail",
-                textScaleFactor: 1.3,
-                style: TextStyle(
+                leading: Icon(
+                  CupertinoIcons.mail,
                   color: Colors.white,
                 ),
-              ),
-            ),
+                title: Text(
+                  "E-Mail",
+                  textScaleFactor: 1.3,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Hom()),
+                  );
+                }),
             ListTile(
                 leading: Icon(
                   CupertinoIcons.profile_circled,
