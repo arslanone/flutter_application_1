@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-
+import 'package:mailto/mailto.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home.dart';
@@ -80,10 +81,12 @@ class MyDrawer extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Hom()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => Mailto(
+
+                  //   )),
+                  // );
                 }),
             ListTile(
                 leading: Icon(
@@ -109,3 +112,16 @@ class MyDrawer extends StatelessWidget {
     );
   }
 }
+
+// launchMailto() async {
+//   final mailtoLink = Mailto(
+//     to: ['to@example.com'],
+//     cc: ['cc1@example.com', 'cc2@example.com'],
+//     subject: 'mailto example subject',
+//     body: 'mailto example body',
+//   );
+//   // Convert the Mailto instance into a string.
+//   // Use either Dart's string interpolation
+//   // or the toString() method.
+//   ('$mailtoLink');
+// }

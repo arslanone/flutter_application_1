@@ -63,11 +63,11 @@ class _HomePageState extends State<Hom> {
             children: <Widget>[
               Container(
                 width: double.infinity,
-                height: 250,
+                height: 150,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                        image: AssetImage('assets/images/loginpic.png'),
+                        image: AssetImage('assets/images/health_banner.jpg'),
                         fit: BoxFit.cover)),
                 child: Container(
                   decoration: BoxDecoration(
@@ -79,6 +79,7 @@ class _HomePageState extends State<Hom> {
                       ])),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
+                    // ignore: prefer_const_literals_to_create_immutables
                     children: <Widget>[
                       Text(
                         "Manage Your Health",
@@ -88,22 +89,31 @@ class _HomePageState extends State<Hom> {
                             fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
-                        height: 30,
+                        height: 10,
                       ),
                       Container(
-                        height: 50,
-                        margin: EdgeInsets.symmetric(horizontal: 40),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white),
-                        child: Center(
-                            child: Text(
-                          "Shop Now",
+                        child: Text(
+                          "Click On Relevant Block For Your Message.",
                           style: TextStyle(
-                              color: Colors.grey[900],
-                              fontWeight: FontWeight.bold),
-                        )),
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
+                      // Container(
+                      //   height: 50,
+                      //   margin: EdgeInsets.symmetric(horizontal: 40),
+                      //   decoration: BoxDecoration(
+                      //       borderRadius: BorderRadius.circular(10),
+                      //       color: Colors.white),
+                      //   child: Center(
+                      //       child: Text(
+                      //     "Shop Now",
+                      //     style: TextStyle(
+                      //         color: Colors.grey[900],
+                      //         fontWeight: FontWeight.bold),
+                      //   )),
+                      // ),
                       SizedBox(
                         height: 30,
                       ),
