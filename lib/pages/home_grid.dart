@@ -164,3 +164,28 @@ class _HomePageState extends State<Hom> {
     );
   }
 }
+
+
+
+
+//   child: Container(
+              //     decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.circular(20),
+              //         gradient:
+              //             LinearGradient(begin: Alignment.bottomRight, colors: [
+              //           Colors.black.withOpacity(.4),
+              //           Colors.black.withOpacity(.2),
+              //         ])),
+              //     child: Column(mainAxisAlignment: MainAxisAlignment.end,
+              //         // ignore: prefer_const_literals_to_create_immutables
+              //         children: <Widget>[
+              //           Text(
+              //             "Manage Your Health",
+              //             style: TextStyle(
+              //                 color: Colors.white,
+              //                 fontSize: 35,
+              //                 fontWeight: FontWeight.bold),
+              //           )
+              //         ]),
+              //   ),
+              // ),

@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:flutter_application_1/pages/cards.dart';
 import 'package:mailto/mailto.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/cupertino.dart';
@@ -81,12 +82,10 @@ class MyDrawer extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => Mailto(
-
-                  //   )),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
                 }),
             ListTile(
                 leading: Icon(

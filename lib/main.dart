@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/cards.dart';
 import 'package:flutter_application_1/pages/home.dart';
 import 'package:flutter_application_1/pages/login.dart';
 // ignore: unused_import
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => HomePage1(),
+        "/": (context) => HomeScreen(),
         "/home": (context) => LoginPage(),
       },
     );
