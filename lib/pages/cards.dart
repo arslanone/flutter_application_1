@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // ignore: prefer_const_constructors
     var cardTextStyle = TextStyle(
         fontFamily: "Montserrat Regular",
-        fontSize: 16,
+        fontSize: 18,
         color: Color.fromRGBO(63, 63, 63, 1));
 
     return Scaffold(
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             decoration: BoxDecoration(
               image: DecorationImage(
                   alignment: Alignment.topCenter,
-                  image: AssetImage('assets/images/header.png')),
+                  image: AssetImage('assets/images/header.d')),
             ),
           ),
           SafeArea(
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Image.network(
-                            'https://cdn-icons.flaticon.com/png/512/2339/premium/2339874.png?token=exp=1652644544~hmac=ffd6059c086b4db481c5d5b2ffba2cff'),
+                            'https://cdn-icons.flaticon.com/png/512/2339/premium/2339874.png?token=exp=1652653743~hmac=b4e8e6574b780dbc33deee5d50cdb086'),
                         SizedBox(
                           width: 16,
                         ),
@@ -102,13 +102,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              SvgPicture.asset(
-                                'assets/images/loginpic.png',
+                              Image.asset(
+                                'assets/images/mental-health.png',
                                 height: 128,
                               ),
-                              Text(
-                                'Personal Data',
-                                style: cardTextStyle,
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'I Need',
+                                  style: cardTextStyle,
+                                ),
                               )
                             ],
                           ),
@@ -126,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 alignment: Alignment.center,
                               ),
                               Text(
-                                'Course Schedule',
+                                'My Condition',
                                 textAlign: TextAlign.center,
                                 style: cardTextStyle,
                               )
@@ -140,12 +143,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              SvgPicture.network(
-                                'https://image.flaticon.com/icons/svg/1904/1904527.svg',
+                              Image.asset(
+                                'assets/images/washing-hands.png',
                                 height: 128,
                               ),
                               Text(
-                                'Attendance Recap',
+                                ' Clean Me',
                                 style: cardTextStyle,
                               )
                             ],
@@ -158,12 +161,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              SvgPicture.network(
-                                'https://image.flaticon.com/icons/svg/1904/1904437.svg',
+                              Image.network(
+                                'https://cdn-icons-png.flaticon.com/512/706/706164.png',
                                 height: 128,
                               ),
                               Text(
-                                'Study Result',
+                                'Food & Minerals',
                                 style: cardTextStyle,
                               )
                             ],
@@ -176,12 +179,33 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              SvgPicture.network(
-                                'https://image.flaticon.com/icons/svg/1904/1904235.svg',
+                              Image.asset(
+                                'assets/images/muscle-pain.png',
+                                height: 128,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Pain & Itching',
+                                  style: cardTextStyle,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          elevation: 4,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Image.asset(
+                                'assets/images/pronunciation.png',
                                 height: 128,
                               ),
                               Text(
-                                'Course Booking',
+                                'Communication',
                                 style: cardTextStyle,
                               )
                             ],
@@ -194,12 +218,30 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              SvgPicture.network(
-                                'https://image.flaticon.com/icons/svg/1904/1904221.svg',
+                              Image.asset(
+                                'assets/images/pencil.png',
                                 height: 128,
                               ),
                               Text(
-                                'Course Plan',
+                                'Write Down',
+                                style: cardTextStyle,
+                              )
+                            ],
+                          ),
+                        ),
+                        Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          elevation: 4,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Image.network(
+                                'https://cdn-icons.flaticon.com/png/512/647/premium/647186.png?token=exp=1652659181~hmac=d0f4910326791cb9f867b06fe9196c88',
+                                height: 128,
+                              ),
+                              Text(
+                                'Medical Suppiles',
                                 style: cardTextStyle,
                               )
                             ],
