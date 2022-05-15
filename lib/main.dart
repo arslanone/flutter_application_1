@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => HomeScreen(),
-        "/home": (context) => LoginPage(),
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomeScreen(),
       },
     );
   }

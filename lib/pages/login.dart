@@ -15,6 +15,7 @@
 
 import 'dart:html';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/cards.dart';
 import 'package:flutter_application_1/pages/home.dart';
 
 import '../widgets/drawer.dart';
@@ -38,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
     await Future.delayed(Duration(seconds: 1));
     // used to navigate through screens
     await Navigator.push(
-        context, MaterialPageRoute(builder: (context) => HomePage()));
+        context, MaterialPageRoute(builder: (context) => HomeScreen()));
     setState(() {
       changeButton = false;
     });
@@ -92,10 +93,25 @@ class _LoginPageState extends State<LoginPage> {
                         },
                       ),
                       TextFormField(
-                        obscureText: true,
+                        obscureText: false,
                         decoration: InputDecoration(
-                            hintText: "Enter Your Password:",
-                            labelText: "Password:"),
+                            hintText: "Enter Your BMI & Blood Group:",
+                            labelText: "BMI & Blood Group:"),
+                        // validator: (value) {
+                        //   if (value!.isEmpty) {
+                        //     return "Password cannot be empty";
+                        //   } else if (value.length < 6) {
+                        //     return "Password length should be atleast 6";
+                        //   }
+
+                        //   return null;
+                        // },
+                      ),
+                      TextFormField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                            hintText: "Enter Your Age:",
+                            labelText: "Your Age:"),
                         // validator: (value) {
                         //   if (value!.isEmpty) {
                         //     return "Password cannot be empty";
