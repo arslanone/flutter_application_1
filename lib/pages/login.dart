@@ -97,15 +97,15 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                             hintText: "Enter Your BMI & Blood Group:",
                             labelText: "BMI & Blood Group:"),
-                        // validator: (value) {
-                        //   if (value!.isEmpty) {
-                        //     return "Password cannot be empty";
-                        //   } else if (value.length < 6) {
-                        //     return "Password length should be atleast 6";
-                        //   }
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "Feild cannot be empty";
+                          } else if (value.length < 6) {
+                            return "Password length should be atleast 6";
+                          }
 
-                        //   return null;
-                        // },
+                          return null;
+                        },
                       ),
                       TextFormField(
                         obscureText: false,
