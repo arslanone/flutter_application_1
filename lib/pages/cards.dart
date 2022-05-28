@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_import
 
+import 'dart:async';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -13,6 +15,31 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void stopMusic() {
+    audioPlayer.stop();
+  }
+
+  void initState() {
+    super.initState();
+    audioPlayer.open(
+      Playlist(audios: [
+        Audio(
+          "assets/sound/calldoctor.mp3",
+        ),
+        Audio(
+          "assets/sound/sinner_like_me.mp3",
+        ),
+        Audio(
+          "assets/sound/beautiful_crazy.mp3",
+        ),
+      ]),
+      autoStart: false,
+      showNotification: false,
+    );
+  }
+
+  final AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
+
   @override
   Widget build(BuildContext context) {
     // to get size
@@ -52,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Image.network(
-                            'https://cdn-icons.flaticon.com/png/512/2339/premium/2339874.png?token=exp=1652653743~hmac=b4e8e6574b780dbc33deee5d50cdb086'),
+                            'https://cdn-icons.flaticon.com/png/512/2339/premium/2339874.png?token=exp=1653739506~hmac=c9950931213b87f6f58e980dc7a32d13'),
                         SizedBox(
                           width: 16,
                         ),
@@ -73,13 +100,15 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 height: 4,
                               ),
-                              Text(
-                                'Manage Your Health Schedule With Patient Buddy',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 14,
-                                  color: Colors.black,
+                              SafeArea(
+                                child: Text(
+                                  'Manage Your Health Schedule With Patient Buddy',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                  ),
                                 ),
                               )
                             ],
@@ -95,63 +124,81 @@ class _HomeScreenState extends State<HomeScreen> {
                       primary: false,
                       crossAxisCount: 2,
                       children: <Widget>[
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/images/mental-health.png',
-                                height: 128,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'I Need',
-                                  style: cardTextStyle,
+                        InkWell(
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/mental-health.png',
+                                  height: 120,
                                 ),
-                              )
-                            ],
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'I Need',
+                                    style: cardTextStyle,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(0);
+                            Timer(Duration(seconds: 2), () => stopMusic());
+                          },
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(1);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.network(
+                                  'https://cdn-icons-png.flaticon.com/512/2302/2302715.png',
+                                  height: 128,
+                                  alignment: Alignment.center,
+                                ),
+                                Text(
+                                  'My Condition',
+                                  textAlign: TextAlign.center,
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.network(
-                                'https://cdn-icons-png.flaticon.com/512/2302/2302715.png',
-                                height: 128,
-                                alignment: Alignment.center,
-                              ),
-                              Text(
-                                'My Condition',
-                                textAlign: TextAlign.center,
-                                style: cardTextStyle,
-                              )
-                            ],
-                          ),
-                        ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/images/washing-hands.png',
-                                height: 128,
-                              ),
-                              Text(
-                                ' Clean Me',
-                                style: cardTextStyle,
-                              )
-                            ],
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/washing-hands.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  ' Clean Me',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         Card(
@@ -181,7 +228,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: <Widget>[
                               Image.asset(
                                 'assets/images/muscle-pain.png',
-                                height: 128,
+                                height: 120,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
