@@ -4,19 +4,15 @@ import 'dart:async';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/categories/i_need.dart';
-import 'package:flutter_application_1/pages/login.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../widgets/drawer.dart';
+import 'package:flutter_application_1/widgets/drawer.dart';
 
-class HomeScreen extends StatefulWidget {
+class INeed extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<INeed> {
   void stopMusic() {
     audioPlayer.stop();
   }
@@ -80,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Image.asset('assets/images/waving-hand.png'),
+                        Image.asset('assets/images/pencil.png'),
                         SizedBox(
                           width: 16,
                         ),
@@ -92,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             // ignore: prefer_const_literals_to_create_immutables
                             children: <Widget>[
                               Text(
-                                'Hi, Welcome To Patient Buddy',
+                                'Please Click On Relevent Picture',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 25,
@@ -103,8 +99,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               SafeArea(
                                 child: Text(
-                                  'Manage Your Health Schedule With Patient Buddy',
-                                  textAlign: TextAlign.center,
+                                  'And Let The Assitant Call For You',
+                                  textAlign: TextAlign.start,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w800,
                                     fontSize: 14,
@@ -133,14 +129,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Image.asset(
-                                  'assets/images/mental-health.png',
+                                Image.network(
+                                  'https://cdn-icons-png.flaticon.com/512/3304/3304567.png',
                                   height: 120,
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    'I Need',
+                                    'Call Doctor',
                                     style: cardTextStyle,
                                   ),
                                 )
@@ -148,18 +144,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => INeed()),
-                            );
-                            // audioPlayer.playlistPlayAtIndex(0);
-                            // Timer(Duration(seconds: 2), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(0);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                         ),
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(1);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            Timer(Duration(seconds: 5), () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
