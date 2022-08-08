@@ -596,11 +596,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/clock.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
+                                  'Time',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -620,11 +620,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/remote.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
+                                  'Remote',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -644,11 +644,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/tvoff.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
+                                  'Turn Off TV',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -668,11 +668,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/tvon.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
+                                  'TUrn On TV',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -692,11 +692,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/rest.jpg',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
+                                  'Let Me Rest',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -716,11 +716,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/silent.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
+                                  'I Need Silence',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -740,11 +740,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/physio.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
+                                  'Massage',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -764,11 +764,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/massage-legs.jpg',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
+                                  'Press Legs',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -788,35 +788,11 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/calender.png',
+                                  'assets/images/face.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Date',
-                                  style: cardTextStyle,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            elevation: 4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'assets/images/calender.png',
-                                  height: 128,
-                                ),
-                                Text(
-                                  'Date',
+                                  'Clean Face',
                                   style: cardTextStyle,
                                 )
                               ],
