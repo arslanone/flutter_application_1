@@ -161,13 +161,13 @@ class _HomeScreenState extends State<INeed> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Image.network(
-                                  'https://cdn-icons-png.flaticon.com/512/2302/2302715.png',
+                                Image.asset(
+                                  'assets/images/medicine.png',
                                   height: 128,
                                   alignment: Alignment.center,
                                 ),
                                 Text(
-                                  'My Condition',
+                                  'Give Me Medicines',
                                   textAlign: TextAlign.center,
                                   style: cardTextStyle,
                                 )
@@ -188,108 +188,639 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/washing-hands.png',
+                                  'assets/images/do-not-go-out.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  ' Clean Me',
+                                  'Dont Go',
                                   style: cardTextStyle,
                                 )
                               ],
                             ),
                           ),
                         ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.network(
-                                'https://cdn-icons-png.flaticon.com/512/706/706164.png',
-                                height: 128,
-                              ),
-                              Text(
-                                'Food & Minerals',
-                                style: cardTextStyle,
-                              )
-                            ],
-                          ),
-                        ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/images/muscle-pain.png',
-                                height: 120,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Pain & Itching',
-                                  style: cardTextStyle,
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/passenger.png',
+                                  height: 128,
                                 ),
-                              )
-                            ],
+                                Text(
+                                  'Help Me Sit',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/images/pronunciation.png',
-                                height: 128,
-                              ),
-                              Text(
-                                'Communication',
-                                style: cardTextStyle,
-                              )
-                            ],
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/sleeping.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Lay Me Down',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/images/pencil.png',
-                                height: 128,
-                              ),
-                              Text(
-                                'Write Down',
-                                style: cardTextStyle,
-                              )
-                            ],
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/turn-right.jpg',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Turn Right',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.network(
-                                'https://cdn-icons.flaticon.com/png/512/647/premium/647186.png?token=exp=1652659181~hmac=d0f4910326791cb9f867b06fe9196c88',
-                                height: 128,
-                              ),
-                              Text(
-                                'Medical Suppiles',
-                                style: cardTextStyle,
-                              )
-                            ],
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/turn-left.jpg',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Turn Left',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/iv-bag.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Remove Drip',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/canula.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Change Canula',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/pillow.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Pillow',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/bed-sheets.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Blanket',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/sunglasses.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Sunglasses',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/comb.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Comb',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/lightbulbon.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Turn On Light',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/light-bulb.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Turn Off Light',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/urine.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Urine',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/toilet.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Need To Use Toilet',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/shower.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'I Need Shower',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(2);
+                            Timer(Duration(seconds: 10), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/calender.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Date',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ],
