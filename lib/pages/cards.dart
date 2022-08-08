@@ -4,7 +4,9 @@ import 'dart:async';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/categories/call.dart';
 import 'package:flutter_application_1/pages/categories/i_need.dart';
+import 'package:flutter_application_1/pages/categories/my_conditions.dart';
 import 'package:flutter_application_1/pages/login.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
@@ -157,55 +159,59 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                         ),
                         InkWell(
-                          onTap: () {
-                            audioPlayer.playlistPlayAtIndex(1);
-                            Timer(Duration(seconds: 10), () => stopMusic());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            elevation: 4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.network(
-                                  'https://cdn-icons-png.flaticon.com/512/2302/2302715.png',
-                                  height: 128,
-                                  alignment: Alignment.center,
-                                ),
-                                Text(
-                                  'My Condition',
-                                  textAlign: TextAlign.center,
-                                  style: cardTextStyle,
-                                )
-                              ],
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              elevation: 4,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.network(
+                                    'https://cdn-icons-png.flaticon.com/512/2302/2302715.png',
+                                    height: 128,
+                                    alignment: Alignment.center,
+                                  ),
+                                  Text(
+                                    'My Condition',
+                                    textAlign: TextAlign.center,
+                                    style: cardTextStyle,
+                                  )
+                                ],
+                              ),
                             ),
-                          ),
-                        ),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyCondition()),
+                              );
+                            }),
                         InkWell(
-                          onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            elevation: 4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'assets/images/washing-hands.png',
-                                  height: 128,
-                                ),
-                                Text(
-                                  ' Clean Me',
-                                  style: cardTextStyle,
-                                )
-                              ],
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              elevation: 4,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/images/washing-hands.png',
+                                    height: 128,
+                                  ),
+                                  Text(
+                                    ' Clean Me',
+                                    style: cardTextStyle,
+                                  )
+                                ],
+                              ),
                             ),
-                          ),
-                        ),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CallHim()),
+                              );
+                            }),
                         Card(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
