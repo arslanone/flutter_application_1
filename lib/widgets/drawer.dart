@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter_application_1/pages/cards.dart';
+import 'package:flutter_application_1/pages/drawing_board.dart';
 import 'package:flutter_application_1/pages/todo.dart';
 import 'package:mailto/mailto.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -50,7 +51,7 @@ class MyDrawer extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage1()),
+                    MaterialPageRoute(builder: (context) => DrawingBoard()),
                   );
                 }),
             ListTile(
