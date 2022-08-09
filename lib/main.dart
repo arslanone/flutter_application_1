@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/cards.dart';
+import 'package:flutter_application_1/pages/categories/i_need.dart';
 import 'package:flutter_application_1/pages/home.dart';
 import 'package:flutter_application_1/pages/login.dart';
 // ignore: unused_import
@@ -7,6 +8,7 @@ import 'package:flutter_application_1/pages/new_home';
 import 'package:flutter_application_1/widgets/button.dart';
 // ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() {
   // ignore: prefer_const_constructors
@@ -28,9 +30,17 @@ class MyApp extends StatelessWidget {
         // primaryTextTheme: GoogleFonts.latoTextTheme()
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
+      // home: AnimatedSplashScreen(
+      //   splash: Image.asset("assets/images/chat.png"),
+      //   nextScreen: HomeScreen(),
+      //   splashTransition: SplashTransition.slideTransition,
+      //   backgroundColor: Colors.blueAccent,
+      //   duration: 1500,
+      // ),
       initialRoute: "/",
+      // ignore: prefer_const_literals_to_create_immutables
       routes: {
-        "/": (context) => HomeScreen(),
+        "/": (context) => INeed(),
         "/home": (context) => HomeScreen(),
       },
     );

@@ -25,10 +25,85 @@ class _HomeScreenState extends State<INeed> {
           "assets/sound/calldoctor.mp3",
         ),
         Audio(
-          "assets/sound/sinner_like_me.mp3",
+          "assets/sound/wantMEDICINE.mp3",
         ),
         Audio(
-          "assets/sound/beautiful_crazy.mp3",
+          "assets/sound/wantDONTGO.mp3",
+        ),
+        Audio(
+          "assets/sound/wantSITDOWN.mp3",
+        ),
+        Audio(
+          "assets/sound/wantLIEDOWN.mp3",
+        ),
+        Audio(
+          "assets/sound/wantROLL1.mp3",
+        ),
+        Audio(
+          "assets/sound/wantROLL2.mp3",
+        ),
+        Audio(
+          "assets/sound/wantDRIPremoved.mp3",
+        ),
+        Audio(
+          "assets/sound/wantCHANGEcanula.mp3",
+        ),
+        Audio(
+          "assets/sound/wantPILLOWcorrected.mp3",
+        ),
+        Audio(
+          "assets/sound/wantBLANKET.mp3",
+        ),
+        Audio(
+          "assets/sound/wantGLASSES.mp3",
+        ),
+        Audio(
+          "assets/sound/wantHAIRbrusged.mp3",
+        ),
+        Audio(
+          "assets/sound/wantLIGHTon.mp3",
+        ),
+        Audio(
+          "assets/sound/wantLIGHTOFF.mp3",
+        ),
+        Audio(
+          "assets/sound/wantNumber1.mp3",
+        ),
+        Audio(
+          "assets/sound/wantNumber2.mp3",
+        ),
+        Audio(
+          "assets/sound/wantSHOWER.mp3",
+        ),
+        Audio(
+          "assets/sound/wantDATE.mp3",
+        ),
+        Audio(
+          "assets/sound/wantTIME.mp3",
+        ),
+        Audio(
+          "assets/sound/wantREMOTE.mp3",
+        ),
+        Audio(
+          "assets/sound/wantTVOFF.mp3",
+        ),
+        Audio(
+          "assets/sound/wantTVON.mp3",
+        ),
+        Audio(
+          "assets/sound/wantPEACE.mp3",
+        ),
+        Audio(
+          "assets/sound/wantQUIET.mp3",
+        ),
+        Audio(
+          "assets/sound/wantFOOTMASSAGE.mp3",
+        ),
+        Audio(
+          "assets/sound/wantEXCERCISE.mp3",
+        ),
+        Audio(
+          "assets/sound/cleanFACE.mp3",
         ),
       ]),
       autoStart: false,
@@ -152,7 +227,8 @@ class _HomeScreenState extends State<INeed> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(1);
-                            Timer(Duration(seconds: 5), () => stopMusic());
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -178,7 +254,8 @@ class _HomeScreenState extends State<INeed> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            Timer(Duration(milliseconds: 1000),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -201,8 +278,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(3);
+                            Timer(Duration(milliseconds: 1100),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -225,8 +303,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(4);
+                            Timer(Duration(milliseconds: 1100),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -249,8 +328,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(5);
+                            Timer(Duration(milliseconds: 2000),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -273,8 +353,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(6);
+                            Timer(Duration(milliseconds: 2000),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -297,8 +378,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(7);
+                            Timer(Duration(milliseconds: 1290),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -321,8 +403,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(8);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -345,8 +428,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(9);
+                            Timer(Duration(milliseconds: 1550),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -369,8 +453,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(10);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -393,8 +478,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(11);
+                            Timer(Duration(milliseconds: 1400),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -417,8 +503,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(12);
+                            Timer(Duration(milliseconds: 1200),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -441,8 +528,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(13);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -465,8 +553,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(14);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -489,8 +578,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(15);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -513,8 +603,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(16);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -537,8 +628,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(17);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -561,8 +653,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(18);
+                            Timer(Duration(milliseconds: 1400),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -585,8 +678,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(19);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -609,8 +703,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(20);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -633,8 +728,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(21);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -657,8 +753,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(22);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -672,7 +769,7 @@ class _HomeScreenState extends State<INeed> {
                                   height: 128,
                                 ),
                                 Text(
-                                  'TUrn On TV',
+                                  'Turn On TV',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -681,8 +778,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(23);
+                            Timer(Duration(milliseconds: 1700),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -692,7 +790,7 @@ class _HomeScreenState extends State<INeed> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/rest.jpg',
+                                  'assets/images/rest.png',
                                   height: 128,
                                 ),
                                 Text(
@@ -705,8 +803,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(24);
+                            Timer(Duration(milliseconds: 1300),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -729,8 +828,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(25);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -753,8 +853,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(26);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -777,8 +878,9 @@ class _HomeScreenState extends State<INeed> {
                         ),
                         InkWell(
                           onTap: () {
-                            audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(seconds: 10), () => stopMusic());
+                            audioPlayer.playlistPlayAtIndex(27);
+                            Timer(Duration(milliseconds: 1500),
+                                () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
