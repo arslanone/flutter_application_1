@@ -57,11 +57,11 @@ class _DrawingBoardState extends State<DrawingBoard> {
                 );
               });
             },
-            onPanEnd: (details) {
-              setState(() {
-                drawingPoints.add(null);
-              });
-            },
+            // onPanEnd: (details) {
+            //   setState(() {
+            //     drawingPoints.add(null);
+            //   });
+            // },
             child: CustomPaint(
               painter: _DrawingPainter(drawingPoints),
               // ignore: sized_box_for_whitespace
