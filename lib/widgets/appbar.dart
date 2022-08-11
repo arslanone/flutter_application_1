@@ -5,13 +5,13 @@ class NewAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String name = "Patient Buddy App";
+    String name = "Patient Buddy";
 
     return AppBar(
         title: Text(name),
         backgroundColor: Colors.white,
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: IconThemeData(color: Colors.deepPurple),
         toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
         titleTextStyle: Theme.of(context).textTheme.headline6);
   }

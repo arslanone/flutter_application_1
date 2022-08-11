@@ -1,13 +1,19 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_import
+// ignore_for_file: prefer_const_constructors, unnecessary_import, unused_import
 
 import 'dart:async';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/categories/call.dart';
+import 'package:flutter_application_1/pages/categories/chat.dart';
+import 'package:flutter_application_1/pages/categories/clean.dart';
 import 'package:flutter_application_1/pages/categories/i_need.dart';
 import 'package:flutter_application_1/pages/categories/my_conditions.dart';
+import 'package:flutter_application_1/pages/categories/pain.dart';
+import 'package:flutter_application_1/pages/drawing_board.dart';
 import 'package:flutter_application_1/pages/login.dart';
+import 'package:flutter_application_1/pages/todo.dart';
+import 'package:flutter_application_1/pages/todo_updated.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -195,11 +201,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   Image.asset(
-                                    'assets/images/washing-hands.png',
+                                    'assets/images/call.png',
                                     height: 128,
                                   ),
                                   Text(
-                                    ' Clean Me',
+                                    'Call Him',
                                     style: cardTextStyle,
                                   )
                                 ],
@@ -212,99 +218,136 @@ class _HomeScreenState extends State<HomeScreen> {
                                     builder: (context) => CallHim()),
                               );
                             }),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.network(
-                                'https://cdn-icons-png.flaticon.com/512/706/706164.png',
-                                height: 128,
+                        InkWell(
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              elevation: 4,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.network(
+                                    'https://cdn-icons-png.flaticon.com/512/2913/2913564.png',
+                                    height: 128,
+                                  ),
+                                  Text(
+                                    'Clean & Hygiene',
+                                    style: cardTextStyle,
+                                  )
+                                ],
                               ),
-                              Text(
-                                'Food & Minerals',
-                                style: cardTextStyle,
-                              )
-                            ],
-                          ),
-                        ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/images/muscle-pain.png',
-                                height: 120,
+                            ),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => clean()),
+                              );
+                            }),
+                        InkWell(
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              elevation: 4,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/images/muscle-pain.png',
+                                    height: 120,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'Pain & Itching',
+                                      style: cardTextStyle,
+                                    ),
+                                  )
+                                ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Pain & Itching',
-                                  style: cardTextStyle,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/images/pronunciation.png',
-                                height: 128,
+                            ),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => pain()),
+                              );
+                            }),
+                        InkWell(
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              elevation: 4,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/images/pronunciation.png',
+                                    height: 128,
+                                  ),
+                                  Text(
+                                    'Communication',
+                                    style: cardTextStyle,
+                                  )
+                                ],
                               ),
-                              Text(
-                                'Communication',
-                                style: cardTextStyle,
-                              )
-                            ],
-                          ),
-                        ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.asset(
-                                'assets/images/pencil.png',
-                                height: 128,
+                            ),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => chat()),
+                              );
+                            }),
+                        InkWell(
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              elevation: 4,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/images/pencil.png',
+                                    height: 128,
+                                  ),
+                                  Text(
+                                    'Write Down',
+                                    style: cardTextStyle,
+                                  )
+                                ],
                               ),
-                              Text(
-                                'Write Down',
-                                style: cardTextStyle,
-                              )
-                            ],
-                          ),
-                        ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Image.network(
-                                'https://cdn-icons.flaticon.com/png/512/647/premium/647186.png?token=exp=1652659181~hmac=d0f4910326791cb9f867b06fe9196c88',
-                                height: 128,
+                            ),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DrawingBoard()),
+                              );
+                            }),
+                        InkWell(
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              elevation: 4,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    'assets/images/todo.png',
+                                    height: 128,
+                                  ),
+                                  Text(
+                                    'To-Do-List',
+                                    style: cardTextStyle,
+                                  )
+                                ],
                               ),
-                              Text(
-                                'Medical Suppiles',
-                                style: cardTextStyle,
-                              )
-                            ],
-                          ),
-                        ),
+                            ),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => todo()),
+                              );
+                            }),
                       ],
                     ),
                   ),

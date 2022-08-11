@@ -1,19 +1,18 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_import
 
 import 'dart:async';
-
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_application_1/widgets/drawer.dart';
 
-// ignore: use_key_in_widget_constructors
-class MyCondition extends StatefulWidget {
+class chat extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<MyCondition> {
+class _HomeScreenState extends State<chat> {
   void stopMusic() {
     audioPlayer.stop();
   }
@@ -23,52 +22,46 @@ class _HomeScreenState extends State<MyCondition> {
     audioPlayer.open(
       Playlist(audios: [
         Audio(
-          "assets/sound/feelHungry.mp3",
+          "assets/sound/sayYES.mp3",
         ),
         Audio(
-          "assets/sound/feelThristy.mp3",
+          "assets/sound/sayNO.mp3",
         ),
         Audio(
-          "assets/sound/feelOk.mp3",
+          "assets/sound/sayTalkCLEARLY.mp3",
         ),
         Audio(
-          "assets/sound/feelPain.mp3",
+          "assets/sound/sayTALKAGAIN.mp3",
         ),
         Audio(
-          "assets/sound/feelCold.mp3",
+          "assets/sound/saySTOP.mp3",
         ),
         Audio(
-          "assets/sound/feelHot.mp3",
+          "assets/sound/saySpeakSLOWLY.mp3",
         ),
         Audio(
-          "assets/sound/feelAngry.mp3",
+          "assets/sound/saySpeakLOUDER.mp3",
         ),
         Audio(
-          "assets/sound/feelDontKnow.mp3",
+          "assets/sound/sayWHAT.mp3",
         ),
         Audio(
-          "assets/sound/feelBetter.mp3",
+          "assets/sound/sayWHERE.mp3",
         ),
         Audio(
-          "assets/sound/feelSick.mp3",
+          "assets/sound/sayWHEN.mp3",
         ),
         Audio(
-          "assets/sound/feelScared.mp3",
+          "assets/sound/sayWHO.mp3",
         ),
         Audio(
-          "assets/sound/feelStressed.mp3",
+          "assets/sound/sayWHY.mp3",
         ),
         Audio(
-          "assets/sound/Ok.mp3",
+          "assets/sound/sayHOW.mp3",
         ),
         Audio(
-          "assets/sound/feelDontKnow.mp3",
-        ),
-        Audio(
-          "assets/sound/feelnausea.mp3",
-        ),
-        Audio(
-          "assets/sound/feelBreath.mp3",
+          "assets/sound/sayTHANKS.mp3",
         ),
       ]),
       autoStart: false,
@@ -116,7 +109,7 @@ class _HomeScreenState extends State<MyCondition> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Image.asset('assets/images/medicalcondition.png'),
+                        Image.asset('assets/images/communicate.png'),
                         SizedBox(
                           width: 16,
                         ),
@@ -128,7 +121,7 @@ class _HomeScreenState extends State<MyCondition> {
                             // ignore: prefer_const_literals_to_create_immutables
                             children: <Widget>[
                               Text(
-                                'Express Your Current Condition',
+                                'Communicate Easily With Others',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 25,
@@ -139,7 +132,7 @@ class _HomeScreenState extends State<MyCondition> {
                               ),
                               SafeArea(
                                 child: Text(
-                                  'Let Your Loved Ones Help You!',
+                                  'Simply Press Any Card & Let The App Plays For You',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w800,
@@ -170,13 +163,13 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/hungry.png',
+                                  'assets/images/yes.png',
                                   height: 120,
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    'I Am Hungry',
+                                    'Yes!',
                                     style: cardTextStyle,
                                   ),
                                 )
@@ -185,15 +178,15 @@ class _HomeScreenState extends State<MyCondition> {
                           ),
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(0);
-                            Timer(Duration(milliseconds: 1700),
+                            Timer(Duration(milliseconds: 1000),
                                 () => stopMusic());
                           },
                         ),
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(1);
-                            Timer(Duration(milliseconds: 1650),
-                                () => stopMusic());
+                            Timer(
+                                Duration(milliseconds: 900), () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -203,12 +196,12 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/water.png',
+                                  'assets/images/no.png',
                                   height: 128,
                                   alignment: Alignment.center,
                                 ),
                                 Text(
-                                  'I Need Water',
+                                  'No!',
                                   textAlign: TextAlign.center,
                                   style: cardTextStyle,
                                 )
@@ -219,7 +212,7 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(2);
-                            Timer(Duration(milliseconds: 1500),
+                            Timer(Duration(milliseconds: 1200),
                                 () => stopMusic());
                           },
                           child: Card(
@@ -230,11 +223,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/oknew.jpg',
+                                  'assets/images/details.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Am Okay',
+                                  'Tell Me The Details',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -244,7 +237,7 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(3);
-                            Timer(Duration(milliseconds: 1500),
+                            Timer(Duration(milliseconds: 1100),
                                 () => stopMusic());
                           },
                           child: Card(
@@ -255,11 +248,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/painnew.jpg',
+                                  'assets/images/repeat.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Am In Pain',
+                                  'Repeat Again',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -269,7 +262,7 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(4);
-                            Timer(Duration(milliseconds: 1500),
+                            Timer(Duration(milliseconds: 1100),
                                 () => stopMusic());
                           },
                           child: Card(
@@ -280,11 +273,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/Cold.jpg',
+                                  'assets/images/stop.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Am Cold',
+                                  'Stop!',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -294,7 +287,7 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(5);
-                            Timer(Duration(milliseconds: 1500),
+                            Timer(Duration(milliseconds: 1400),
                                 () => stopMusic());
                           },
                           child: Card(
@@ -305,11 +298,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/Hot.jpg',
+                                  'assets/images/slowspeak.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Feel Hot',
+                                  'Speak Slow',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -319,7 +312,7 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(6);
-                            Timer(Duration(milliseconds: 1500),
+                            Timer(Duration(milliseconds: 1400),
                                 () => stopMusic());
                           },
                           child: Card(
@@ -330,11 +323,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/angry-removebg-preview.jpg',
+                                  'assets/images/loud.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Am Angry',
+                                  'Speak Loud',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -344,8 +337,8 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(7);
-                            Timer(Duration(milliseconds: 1500),
-                                () => stopMusic());
+                            Timer(
+                                Duration(milliseconds: 900), () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -355,11 +348,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images//dontknow.jpg',
+                                  'assets/images/what.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  "I Don't Know",
+                                  'What?',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -369,8 +362,8 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(8);
-                            Timer(Duration(milliseconds: 1500),
-                                () => stopMusic());
+                            Timer(
+                                Duration(milliseconds: 900), () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -380,11 +373,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images//better.jpg',
+                                  'assets/images/where.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Am Good',
+                                  'Where?',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -394,8 +387,8 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(9);
-                            Timer(Duration(milliseconds: 1500),
-                                () => stopMusic());
+                            Timer(
+                                Duration(milliseconds: 900), () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -405,11 +398,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/Worse-removebg-preview.jpg',
+                                  'assets/images/when.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Feel Worse',
+                                  'When?',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -419,8 +412,8 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(10);
-                            Timer(Duration(milliseconds: 1500),
-                                () => stopMusic());
+                            Timer(
+                                Duration(milliseconds: 900), () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -430,11 +423,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/afraid.jpg',
+                                  'assets/images/who.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Am Afraid',
+                                  'Who?',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -444,7 +437,32 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(11);
-                            Timer(Duration(milliseconds: 1500),
+                            Timer(
+                                Duration(milliseconds: 900), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/why.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Why?',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(12);
+                            Timer(Duration(milliseconds: 1100),
                                 () => stopMusic());
                           },
                           child: Card(
@@ -455,11 +473,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/anxious-removebg-preview.jpg',
+                                  'assets/images/how.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Am Anxious',
+                                  'How?',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -469,31 +487,6 @@ class _HomeScreenState extends State<MyCondition> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(13);
-                            Timer(Duration(microseconds: 1500),
-                                () => stopMusic());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            elevation: 4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'assets/images/fever-removebg-preview.jpg',
-                                  height: 128,
-                                ),
-                                Text(
-                                  'I Have Fever',
-                                  style: cardTextStyle,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            audioPlayer.playlistPlayAtIndex(13);
                             Timer(Duration(milliseconds: 1500),
                                 () => stopMusic());
                           },
@@ -505,111 +498,11 @@ class _HomeScreenState extends State<MyCondition> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/I_am_tense-removebg-preview.jpg',
+                                  'assets/images/thankyou.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'I Feel Tense',
-                                  style: cardTextStyle,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            audioPlayer.playlistPlayAtIndex(14);
-                            Timer(Duration(milliseconds: 1500),
-                                () => stopMusic());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            elevation: 4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'assets/images/tired.jpg',
-                                  height: 128,
-                                ),
-                                Text(
-                                  'I Feel Tired',
-                                  style: cardTextStyle,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            audioPlayer.playlistPlayAtIndex(15);
-                            Timer(Duration(milliseconds: 1500),
-                                () => stopMusic());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            elevation: 4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'assets/images/NoUnderstand.jpg',
-                                  height: 128,
-                                ),
-                                Text(
-                                  "I Don't Understand",
-                                  style: cardTextStyle,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            audioPlayer.playlistPlayAtIndex(16);
-                            Timer(Duration(milliseconds: 1500),
-                                () => stopMusic());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            elevation: 4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'assets/images/nausea.jpg',
-                                  height: 128,
-                                ),
-                                Text(
-                                  'I Am Having Nausea',
-                                  style: cardTextStyle,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            audioPlayer.playlistPlayAtIndex(17);
-                            Timer(Duration(milliseconds: 1600),
-                                () => stopMusic());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8)),
-                            elevation: 4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'assets/images/dizzy-removebg-preview.jpg',
-                                  height: 128,
-                                ),
-                                Text(
-                                  'I Feel Dizzy',
+                                  'Thank you!',
                                   style: cardTextStyle,
                                 )
                               ],

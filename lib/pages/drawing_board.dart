@@ -3,6 +3,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 class DrawingBoard extends StatefulWidget {
   const DrawingBoard({Key? key}) : super(key: key);
 
@@ -26,6 +28,10 @@ class _DrawingBoardState extends State<DrawingBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Patient Buddy'),
+      ),
+      drawer: MyDrawer(),
       body: Stack(
         children: [
           GestureDetector(
@@ -59,7 +65,7 @@ class _DrawingBoardState extends State<DrawingBoard> {
             },
             // onPanEnd: (details) {
             //   setState(() {
-            //     drawingPoints.add(null);
+            //     drawingPoints.add();
             //   });
             // },
             child: CustomPaint(

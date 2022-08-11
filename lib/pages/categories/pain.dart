@@ -5,12 +5,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/drawer.dart';
 
-class CallHim extends StatefulWidget {
+class pain extends StatefulWidget {
+  const pain({Key? key}) : super(key: key);
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<CallHim> {
+class _HomeScreenState extends State<pain> {
   void stopMusic() {
     audioPlayer.stop();
   }
@@ -20,16 +22,22 @@ class _HomeScreenState extends State<CallHim> {
     audioPlayer.open(
       Playlist(audios: [
         Audio(
-          "assets/sound/callATTENTAND.mp3",
+          "assets/sound/feelPain.mp3",
         ),
         Audio(
-          "assets/sound/callTHERAPIST.mp3",
+          "assets/sound/painNUMB.mp3",
         ),
         Audio(
-          "assets/sound/callNURSE.mp3",
+          "assets/sound/painITCH.mp3",
         ),
         Audio(
-          "assets/sound/callNURSINGASSISTANT.mp3",
+          "assets/sound/painMILD.mp3",
+        ),
+        Audio(
+          "assets/sound/painSEVERE.mp3",
+        ),
+        Audio(
+          "assets/sound/painMEDIUM.mp3",
         ),
       ]),
       autoStart: false,
@@ -77,7 +85,7 @@ class _HomeScreenState extends State<CallHim> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Image.asset('assets/images/family.png'),
+                        Image.asset('assets/images/painmain.png'),
                         SizedBox(
                           width: 16,
                         ),
@@ -89,7 +97,7 @@ class _HomeScreenState extends State<CallHim> {
                             // ignore: prefer_const_literals_to_create_immutables
                             children: <Widget>[
                               Text(
-                                'Call Someone For Essenital Needs',
+                                'Let Other Help You In Pain',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 25,
@@ -100,7 +108,7 @@ class _HomeScreenState extends State<CallHim> {
                               ),
                               SafeArea(
                                 child: Text(
-                                  'And Let The Other Help You',
+                                  'Ask Your Loved Ones For Help',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w800,
@@ -131,13 +139,13 @@ class _HomeScreenState extends State<CallHim> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/attendant.png',
+                                  'assets/images/mainpain.png',
                                   height: 120,
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    'Call Attendent',
+                                    'Feeling Pain',
                                     style: cardTextStyle,
                                   ),
                                 )
@@ -146,14 +154,14 @@ class _HomeScreenState extends State<CallHim> {
                           ),
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(0);
-                            Timer(Duration(milliseconds: 1500),
+                            Timer(Duration(milliseconds: 1650),
                                 () => stopMusic());
                           },
                         ),
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(1);
-                            Timer(Duration(milliseconds: 2000),
+                            Timer(Duration(milliseconds: 1700),
                                 () => stopMusic());
                           },
                           child: Card(
@@ -164,12 +172,12 @@ class _HomeScreenState extends State<CallHim> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/physiotherapist.png',
+                                  'assets/images/numb.png',
                                   height: 128,
                                   alignment: Alignment.center,
                                 ),
                                 Text(
-                                  'Call My Physiotherapist',
+                                  'Feeling Numb',
                                   textAlign: TextAlign.center,
                                   style: cardTextStyle,
                                 )
@@ -191,11 +199,11 @@ class _HomeScreenState extends State<CallHim> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/nurse.png',
+                                  'assets/images/itchiness.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Call Nurse',
+                                  'Feeling Itchiness',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -205,8 +213,8 @@ class _HomeScreenState extends State<CallHim> {
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(3);
-                            Timer(Duration(milliseconds: 1800),
-                                () => stopMusic());
+                            Timer(
+                                Duration(milliseconds: 810), () => stopMusic());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -216,11 +224,61 @@ class _HomeScreenState extends State<CallHim> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/assistant.png',
+                                  'assets/images/mildpain.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Call Nursing Assistant',
+                                  'Mild Pain',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(4);
+                            Timer(
+                                Duration(milliseconds: 900), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/severepain.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Severe Pain',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(5);
+                            Timer(
+                                Duration(milliseconds: 900), () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/lowpain.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Low Pain',
                                   style: cardTextStyle,
                                 )
                               ],

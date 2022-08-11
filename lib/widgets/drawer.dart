@@ -2,6 +2,8 @@
 import 'package:flutter_application_1/pages/cards.dart';
 import 'package:flutter_application_1/pages/drawing_board.dart';
 import 'package:flutter_application_1/pages/todo.dart';
+import 'package:flutter_application_1/pages/todo_updated.dart';
+import 'package:flutter_application_1/pages/tts.dart';
 import 'package:mailto/mailto.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,7 +20,8 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const imageUrl = "https://avatars.githubusercontent.com/u/104207215?v=4";
+    const imageUrl =
+        "https://res.cloudinary.com/dedbcjk2j/image/upload/v1660159670/203151_odtpol.png";
     return Drawer(
       child: Container(
         color: Colors.deepPurple,
@@ -30,19 +33,59 @@ class MyDrawer extends StatelessWidget {
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                   margin: EdgeInsets.zero,
-                  accountName: Text("Arslan Naeem"),
-                  accountEmail: Text("ak.arslan198@gmail.com"),
+                  accountName: Text("Patient Buddy"),
+                  accountEmail: Text("Your #1 Buddy For Essential Tasks"),
                   currentAccountPicture: CircleAvatar(
                     backgroundImage: NetworkImage(imageUrl),
                   )),
             ),
+            InkWell(
+              child: ListTile(
+                  leading: Icon(
+                    CupertinoIcons.home,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    "Home",
+                    textScaleFactor: 1.3,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                    );
+                  }),
+            ),
+            InkWell(
+              child: ListTile(
+                  leading: Icon(
+                    CupertinoIcons.hand_draw,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    "Draw Something",
+                    textScaleFactor: 1.3,
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DrawingBoard()),
+                    );
+                  }),
+            ),
             ListTile(
                 leading: Icon(
-                  CupertinoIcons.home,
+                  CupertinoIcons.speaker_1,
                   color: Colors.white,
                 ),
                 title: Text(
-                  "Home",
+                  "Text To Speech",
                   textScaleFactor: 1.3,
                   style: TextStyle(
                     color: Colors.white,
@@ -51,16 +94,16 @@ class MyDrawer extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => DrawingBoard()),
+                    MaterialPageRoute(builder: (context) => MyHomePage()),
                   );
                 }),
             ListTile(
                 leading: Icon(
-                  CupertinoIcons.chart_bar_square_fill,
+                  CupertinoIcons.pen,
                   color: Colors.white,
                 ),
                 title: Text(
-                  "My Medicines",
+                  "To-Do-List",
                   textScaleFactor: 1.3,
                   style: TextStyle(
                     color: Colors.white,
@@ -69,43 +112,7 @@ class MyDrawer extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Hom()),
-                  );
-                }),
-            ListTile(
-                leading: Icon(
-                  CupertinoIcons.mail,
-                  color: Colors.white,
-                ),
-                title: Text(
-                  "Report A Bug",
-                  textScaleFactor: 1.3,
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ToDO()),
-                  );
-                }),
-            ListTile(
-                leading: Icon(
-                  CupertinoIcons.profile_circled,
-                  color: Colors.white,
-                ),
-                title: Text(
-                  "My Account",
-                  textScaleFactor: 1.3,
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => todo()),
                   );
                 }),
           ],

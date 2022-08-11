@@ -41,6 +41,7 @@ dependencies:
   url_launcher: ^6.1.0
   assets_audio_player: ^3.0.3+1
   audioplayer: ^0.8.1
+  flutter_tts: ^3.5.0
 
 
 

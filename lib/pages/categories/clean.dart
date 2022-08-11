@@ -5,12 +5,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/drawer.dart';
 
-class CallHim extends StatefulWidget {
+class clean extends StatefulWidget {
+  const clean({Key? key}) : super(key: key);
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<CallHim> {
+class _HomeScreenState extends State<clean> {
   void stopMusic() {
     audioPlayer.stop();
   }
@@ -20,16 +22,28 @@ class _HomeScreenState extends State<CallHim> {
     audioPlayer.open(
       Playlist(audios: [
         Audio(
-          "assets/sound/callATTENTAND.mp3",
+          "assets/sound/cleanBODY.mp3",
         ),
         Audio(
-          "assets/sound/callTHERAPIST.mp3",
+          "assets/sound/cleanTEETH.mp3",
         ),
         Audio(
-          "assets/sound/callNURSE.mp3",
+          "assets/sound/cleanHAIR.mp3",
         ),
         Audio(
-          "assets/sound/callNURSINGASSISTANT.mp3",
+          "assets/sound/cleanHandsMaleFixed.mp3",
+        ),
+        Audio(
+          "assets/sound/cleanNOSE.mp3",
+        ),
+        Audio(
+          "assets/sound/cleanFACE.mp3",
+        ),
+        Audio(
+          "assets/sound/cleanLEGS.mp3",
+        ),
+        Audio(
+          "assets/sound/ear.mp3",
         ),
       ]),
       autoStart: false,
@@ -77,7 +91,8 @@ class _HomeScreenState extends State<CallHim> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Image.asset('assets/images/family.png'),
+                        Image.network(
+                            'https://cdn-icons-png.flaticon.com/512/2913/2913557.png'),
                         SizedBox(
                           width: 16,
                         ),
@@ -89,7 +104,7 @@ class _HomeScreenState extends State<CallHim> {
                             // ignore: prefer_const_literals_to_create_immutables
                             children: <Widget>[
                               Text(
-                                'Call Someone For Essenital Needs',
+                                'Let The Other Know You Need Help',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 25,
@@ -100,7 +115,7 @@ class _HomeScreenState extends State<CallHim> {
                               ),
                               SafeArea(
                                 child: Text(
-                                  'And Let The Other Help You',
+                                  'Ask Your Loved Ones For Cleaning',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w800,
@@ -131,13 +146,13 @@ class _HomeScreenState extends State<CallHim> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/attendant.png',
+                                  'assets/images/body.png',
                                   height: 120,
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    'Call Attendent',
+                                    'Clean Body',
                                     style: cardTextStyle,
                                   ),
                                 )
@@ -146,14 +161,14 @@ class _HomeScreenState extends State<CallHim> {
                           ),
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(0);
-                            Timer(Duration(milliseconds: 1500),
+                            Timer(Duration(milliseconds: 1650),
                                 () => stopMusic());
                           },
                         ),
                         InkWell(
                           onTap: () {
                             audioPlayer.playlistPlayAtIndex(1);
-                            Timer(Duration(milliseconds: 2000),
+                            Timer(Duration(milliseconds: 1700),
                                 () => stopMusic());
                           },
                           child: Card(
@@ -164,12 +179,12 @@ class _HomeScreenState extends State<CallHim> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/physiotherapist.png',
+                                  'assets/images/teeth.png',
                                   height: 128,
                                   alignment: Alignment.center,
                                 ),
                                 Text(
-                                  'Call My Physiotherapist',
+                                  'Clean Teeth',
                                   textAlign: TextAlign.center,
                                   style: cardTextStyle,
                                 )
@@ -191,11 +206,11 @@ class _HomeScreenState extends State<CallHim> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/nurse.png',
+                                  'assets/images/washhead.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Call Nurse',
+                                  'Wash Head',
                                   style: cardTextStyle,
                                 )
                               ],
@@ -216,11 +231,111 @@ class _HomeScreenState extends State<CallHim> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'assets/images/assistant.png',
+                                  'assets/images/cleanhand.png',
                                   height: 128,
                                 ),
                                 Text(
-                                  'Call Nursing Assistant',
+                                  'Wash Hands',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(4);
+                            Timer(Duration(milliseconds: 1700),
+                                () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/cleannose.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Clean Nose',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(5);
+                            Timer(Duration(milliseconds: 1800),
+                                () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/washface.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Wash Face',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(6);
+                            Timer(Duration(milliseconds: 1800),
+                                () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/cleanlegs.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Clean Legs',
+                                  style: cardTextStyle,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            audioPlayer.playlistPlayAtIndex(7);
+                            Timer(Duration(milliseconds: 1800),
+                                () => stopMusic());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            elevation: 4,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'assets/images/cleanear.png',
+                                  height: 128,
+                                ),
+                                Text(
+                                  'Clean Ear',
                                   style: cardTextStyle,
                                 )
                               ],
